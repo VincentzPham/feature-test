@@ -135,8 +135,9 @@ namespace WebApplication1.Areas.Identity.Pages.Account
 
                     /*await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");*/
+
                     MailSender.SendEmail(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                        $"Please confirm your account by click this -> {callbackUrl}");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
