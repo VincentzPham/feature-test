@@ -17,5 +17,11 @@ namespace WebApplication1.Models
         [Column("passoword")]
         [Required]
         public override string? PasswordHash { get; set; }
+
+        [Column("user_role")]
+        [ForeignKey("role")]
+        public int? RoleId {  get; set; }
+
+        public Role? Role { get; set; }
     }
 }

@@ -15,5 +15,6 @@ namespace WebApplication1.Models
         [Required]
         public override string? Name { get; set; }
 
+        public List<User>? Users { get; set; }
     }
 }

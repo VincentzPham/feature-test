@@ -16,9 +16,11 @@ namespace WebApplication1
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            //builder for default identity scaffold
             //builder.Services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+            //builder for custom user and role entity
             builder.Services.AddIdentity<User, Role>(options => options.SignIn.RequireConfirmedAccount = true)
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultUI()
