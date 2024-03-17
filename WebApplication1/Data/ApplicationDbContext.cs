@@ -19,6 +19,9 @@ namespace WebApplication1.Data
             //modelBuilder.Entity<User>().ToTable("User");
             //modelBuilder.Entity<Role>().ToTable("Role");
 
+            //drop unnecessary column
+            //modelBuilder.Entity<User>().Ignore(r=> r.AccessFailedCount);
+
             //remove the user role that create the many-many relationship between user and role
             modelBuilder.Ignore<IdentityUserRole<int>>();
         }
