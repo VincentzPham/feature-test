@@ -23,7 +23,7 @@ namespace WebApplication1.Data
             //modelBuilder.Entity<User>().Ignore(r=> r.AccessFailedCount);
 
             //remove the user role that create the many-many relationship between user and role
-            modelBuilder.Ignore<IdentityUserRole<int>>();
+            //modelBuilder.Ignore<IdentityUserRole<int>>();
         }
         public DbSet<User>? User { get; set; }
         public DbSet<Role>? Role { get; set; }

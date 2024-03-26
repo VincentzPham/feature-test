@@ -14,7 +14,7 @@ namespace WebApplication1.Models
         [Required]
         public override string? Email { get; set; }
 
-        [Column("passoword")]
+        [Column("password")]
         [Required]
         public override string? PasswordHash { get; set; }
 
