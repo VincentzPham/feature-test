@@ -26,13 +26,13 @@ namespace EduPost
             .AddDefaultTokenProviders();
 
             //back end validation
-            //builder.Services.Configure<IdentityOptions>(options =>
-            //{
-            //    //customize what is allow in username
-            //    //options.User.AllowedUserNameCharacters = new[] {}
-            //    options.User.RequireUniqueEmail = true;
-                
-            //});
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                //customize what is allow in username
+                //options.User.AllowedUserNameCharacters = new[] {}
+                options.User.RequireUniqueEmail = true;
+
+            });
 
             builder.Services.AddControllersWithViews();
 

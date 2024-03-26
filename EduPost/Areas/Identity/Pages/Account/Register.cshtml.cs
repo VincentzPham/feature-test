@@ -158,7 +158,7 @@ namespace EduPost.Areas.Identity.Pages.Account
 				foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
-                    ValidationErrors.Add(error.ToString());
+                    ValidationErrors.Add(error.Description.ToString());
                 }
 
                 ViewData["validationErrors"] = ValidationErrors;
