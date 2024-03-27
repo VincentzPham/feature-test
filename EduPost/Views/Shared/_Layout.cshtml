@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        <link rel="stylesheet" href="~/dropdownmenu/styledrop.css" />
+        <title>Profile Dropdown</title>
+    </head>
+    <body>
+        <nav class="navbar" style="background-color: black;">
+            <img src="~/images/logo_black.png" style="height:50px;width:200px;margin-left:50px" class="navbar-logo" alt="logo" />
+            <ul class="navbar-nav mr-auto d-flex align-items-center"style="margin-left:100PX;color:white">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html" style="color:white">Manage Articles <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <div class="profile-dropdown" style="margin-right: 100px;">
+                <div onclick="toggle()" class="profile-dropdown-btn">
+                    <div class="profile-img">
+                        <i class="fa-solid fa-circle"></i>
+                    </div>
+
+                    <span style="color: white;">
+                        Menu
+                        <i class="fa-solid fa-angle-down"></i>
+                    </span>
+                </div>
+
+                <ul class="profile-dropdown-list">
+                    <li class="profile-dropdown-list-item">
+                        <a href="/Home/Profile">
+                            <i class="fa-regular fa-user"></i>
+                            Edit Profile
+                        </a>
+                    </li>
+                    <li class="profile-dropdown-list-item">
+                        <a href="/Identity/Account/Logout">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            Log out
+                        </a>
+                    </li>
+                </ul>
+
+                
+            </div>
+        </nav>
+
+        <script src="~/dropdownmenu/script.js"></script>
+    </body>
+    
+   <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/dropdownmenu/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
